@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initiative Voting - EquiVoice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Initiative Voting</h1>
+
+    <!-- Community Group Selector Added Here -->
+    <div class="community-selector" style="margin-bottom: 20px; text-align: center;">
+        <label for="communityGroup" style="font-weight: 600; margin-right: 10px;">Select Your Community Group:</label>
+        <select id="communityGroup" style="padding: 8px 12px; border-radius: 8px; border: 1px solid #ccc;">
+            <option value="general">General Public (Majority Group)</option>
+            <option value="women">Women Delegates Group</option>
+            <option value="minority">Underrepresented / Minority Community</option>
+        </select>
+    </div>
+
+    <div class="voting-cards">
+        <div class="card" id="card-501">
+            <h2>ID: 501 – Women's Digital Skills Program</h2>
+            <p>Providing digital literacy and tech training empowering women in the community.</p>
+            <div class="voting-cta-btn">
+                <button onclick="castVote('501')">Vote!</button>
+            </div>
+            <div class="voting-cta-btn">
+                <button onclick="removeVote('501')">Remove Vote</button>
+            </div>
+        </div>
+
+        <div class="card" id="card-502">
+            <h2>ID: 502 – Accessible Learning Center</h2>
+            <p>Creating inclusive educational facilities for people with disabilities and special needs.</p>
+            <div class="voting-cta-btn">
+                <button onclick="castVote('502')">Vote!</button>
+            </div>
+            <div class="voting-cta-btn">
+                <button onclick="removeVote('502')">Remove Vote</button>
+            </div>
+        </div>
+
+        <div class="card" id="card-503">
+            <h2>ID: 503 – Inclusive Job Fair on Transport Campaign</h2>
+            <p>Promoting fair employment opportunities and accessible public transportation.</p>
+            <div class="voting-cta-btn">
+                <button onclick="castVote('503')">Vote!</button>
+            </div>
+            <div class="voting-cta-btn">
+                <button onclick="removeVote('503')">Remove Vote</button>
+            </div>
+        </div>
+
+        <div class="card" id="card-504">
+            <h2>ID: 504 – Community Health & Safety Center</h2>
+            <p>Improving local healthcare accessibility and safety infrastructure for underrepresented groups.</p>
+            <div class="voting-cta-btn">
+                <button onclick="castVote('504')">Vote!</button>
+            </div>
+            <div class="voting-cta-btn">
+                <button onclick="removeVote('504')">Remove Vote</button>
+            </div>
+        </div>
+        
+        <button onclick="Submit()">Submit Vote</button>
+    </div>
+
+    <div class="thanks" style="display: none;">
+        <h1>Thanks For Voting!!</h1>
+        <button class="Change" onclick="changeVote()">Change Your Vote</button>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="app.js"></script></body>
+</html>

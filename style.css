@@ -1,0 +1,209 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Global Reset & Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f4f7fe;
+    color: #2b3674;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Page Heading */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1b2559;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Community Selector Container */
+.community-selector {
+    background: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px rgba(112, 144, 176, 0.1);
+    margin-bottom: 2rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.community-selector label {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #1b2559;
+}
+
+.community-selector select {
+    width: 100%;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #dcdfe6;
+    font-size: 0.95rem;
+    outline: none;
+    color: #2b3674;
+}
+
+/* Grid Container for Voting Cards */
+.voting-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 2rem;
+}
+
+/* Card Component */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0px 10px 30px rgba(112, 144, 176, 0.12);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.25s ease;
+    border: 2px solid #e9edf7;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.2);
+}
+
+/* Selected Card Highlight */
+.card.selected {
+    border-color: #4318ff !important;
+    background-color: #f7f5ff;
+    box-shadow: 0px 12px 32px rgba(67, 24, 255, 0.2);
+}
+
+.card h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1b2559;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #707ebe;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+/* Action Button Wrapper */
+.voting-cta-btn {
+    width: 100%;
+    margin-top: 0.4rem;
+}
+
+/* Generic Button Styles */
+button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Vote Button Specifics */
+.voting-cta-btn button {
+    background-color: #4318ff;
+    color: #ffffff;
+}
+
+.voting-cta-btn button:hover:not(:disabled) {
+    background-color: #3311db;
+}
+
+/* Selected Button State */
+.voting-cta-btn button.selected-btn {
+    background-color: #01b574 !important;
+    color: #ffffff !important;
+}
+
+/* Main Submit Button */
+.voting-cards > button {
+    grid-column: 1 / -1;
+    max-width: 320px;
+    margin: 1rem auto 0 auto;
+    background: #01b574;
+    color: #ffffff;
+    font-size: 1.05rem;
+    padding: 0.85rem;
+    box-shadow: 0px 6px 18px rgba(1, 181, 116, 0.3);
+}
+
+.voting-cards > button:hover:not(:disabled) {
+    background: #009961;
+}
+
+/* Thanks Section */
+.thanks {
+    display: none;
+    text-align: center;
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(112, 144, 176, 0.12);
+    max-width: 480px;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.thanks h1 {
+    font-size: 1.8rem;
+    color: #01b574;
+    margin-bottom: 1.2rem;
+}
+
+.thanks .Change {
+    background-color: #f4f7fe;
+    color: #4318ff;
+    border: 1px solid #4318ff;
+    max-width: 220px;
+    margin: 0 auto;
+}
+
+.thanks .Change:hover:not(:disabled) {
+    background-color: #4318ff;
+    color: #ffffff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    .voting-cards {
+        grid-template-columns: 1fr;
+    }
+}
